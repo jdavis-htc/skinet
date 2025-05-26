@@ -35,6 +35,8 @@ public class ProductRepository(StoreContext context) : IProductRepository
         {
             "priceAsc" => query.OrderBy(x => x.Price),
             "priceDesc" => query.OrderByDescending(x => x.Price),
+            "idAsc" => query.OrderBy(x => x.Id),
+            "idDesc" => query.OrderByDescending(x => x.Id),
             _ => query.OrderBy(x => x.Name)
         };
 
